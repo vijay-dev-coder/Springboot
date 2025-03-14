@@ -34,6 +34,9 @@ dependencies {
 	// Lombok dependency
 	compileOnly 'org.projectlombok:lombok:1.18.28'
 	annotationProcessor 'org.projectlombok:lombok:1.18.28'
+
+    // Flyway for Database Migrations
+    implementation 'org.flywaydb:flyway-core'
 }
 
 dependencyManagement {
