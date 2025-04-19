@@ -2,6 +2,7 @@ package com.sample.project.springboot.service;
 
 import com.sample.project.springboot.model.Employee;
 import com.sample.project.springboot.repository.EmployeeRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +27,7 @@ public class EmployeeService {
         return employeeRepository.save(employee);
     }
 
+    @Transactional
     public void deleteEmployee(Long id) {
         employeeRepository.deleteById(id);
     }
